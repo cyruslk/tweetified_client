@@ -1,38 +1,109 @@
-.App {
-  text-align: center;
+body{
+  background-color: #f0f0f0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.meme_outer, 
+.meme_container{
+  display: inline-block;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.output_container{
   display: flex;
-  flex-direction: column;
+  width: 98vw;
+  min-height: 70vh;
+  margin: 1vw;
+  margin-bottom: 4vw;
+}
+
+.output_container section:first-child{
+  width: 40%;
+}
+
+.output_container section:last-child{
+  width: 60%;
+  overflow-x: hidden;
+  height: 84vh;
+  margin-top: 10px;
+}
+
+.img_component{
+  position: relative;
+  margin: 0.5vw;
+}
+
+.img_label{
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-self: center;
+  margin: 0.5vw;
+}
+
+.twitter-tweet {
+  margin-top: 0;
+}
+
+.img_label span{
+  font-size: 10px;
+  width: 50%;
+  font-weight: 500;
+  color: rgb(83, 100, 113);
+}
+
+.img_label span:last-child{
+  text-align: right;
+}
+
+.meme_container{
+  display: inline-block;
+}
+
+.img_component img{
+  width: 28vw;
+  cursor: pointer;
+}
+
+.prediction {
+  position: fixed;
+  bottom: 0;
+  margin: 1vw;
+  border: 1px solid;
+  padding: 1vw;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  font-family: times;
+}
+
+
+.first_span,
+.last_span{
+  width: 100%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.img_component .first_span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-top: 0.5vw;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.img_component .last_span{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding-bottom: 0.5vw;
+}
+
+.img_component span{
+  font-family: impact;
+  text-transform: uppercase;
+  font-size: 30px;
+  color: #fff;
+  text-shadow: 1px -1px 12px black;
+  TEXT-ALIGN: CENTER;
+  transform: scaleX(1.4);
+  -webkit-text-stroke: .5PX #000;
 }

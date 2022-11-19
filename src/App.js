@@ -1,25 +1,55 @@
-import logo from './logo.svg';
+import OutputContainer from "./OutputContainer";
+import axios from "axios";
+import { Tweet } from 'react-twitter-widgets';
+import { useEffect, useState } from "react";
+import React from "react";
 import './App.css';
 
-function App() {
+function App(){
+
+  const [mainData, setData] = useState(null)
+
+  useEffect(() => {
+
+    const fetchData = async () => {
+      const data = await axios('https://memeified-server.herokuapp.com/entries');
+      setData(data.data.data);
+    }
+
+    fetchData()
+    .catch(console.error);;
+
+  }, [])
+
+  let renderOutputContainers = () => {
+
+    console.log(mainData, "-mainData");
+
+
+    if(mainData){
+
+      const shuffled = mainData.sort(() => 0.5 - Math.random());
+      let randomlySelected = shuffled.slice(0, 20);
+
+      let mainDataMaped = randomlySelected
+      .filter((ele,index) => index < 20)
+      .map((ele, index) => {
+        return <OutputContainer key={index} data={ele} />
+      })
+      return mainDataMaped;
+    }else{
+      return "loading"
+    }
+  }
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      {renderOutputContainers()}
     </div>
   );
-}
+  
+};
 
 export default App;
+
