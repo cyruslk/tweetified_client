@@ -1,5 +1,6 @@
 body{
-  background-color: #f0f0f0;
+  background-color: black;
+  overflow: hidden;
 }
 
 .meme_outer, 
@@ -7,17 +8,42 @@ body{
   display: inline-block;
 }
 
-.output_container{
+.loader{
+  background-color: rebeccapurple;
+  height: 100vh;
+  width: 100vw;
   display: flex;
-  width: 98vw;
-  min-height: 70vh;
-  margin: 1vw;
-  margin-bottom: 4vw;
+  align-items: center;
+  justify-content: center;
+  z-index: 100000;
+  position: fixed;
+  font-size: 15vw;
 }
 
-.output_container section:first-child{
-  width: 40%;
+.tweet_outer{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  transform: scale(0.95);
 }
+
+.twitter-tweet-rendered{
+ width: 200% !important;
+}
+
+.meme_outer{
+  position: fixed;
+  right: 3vw;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50vw;
+  height: 100vh;
+}
+
 
 .output_container section:last-child{
   width: 60%;
@@ -59,8 +85,9 @@ body{
 }
 
 .img_component img{
-  width: 28vw;
+  height: 80vh;
   cursor: pointer;
+  width: 100%;
 }
 
 .prediction {
@@ -100,10 +127,9 @@ body{
 .img_component span{
   font-family: impact;
   text-transform: uppercase;
-  font-size: 30px;
+  font-size: 42px;
   color: #fff;
   text-shadow: 1px -1px 12px black;
   TEXT-ALIGN: CENTER;
-  transform: scaleX(1.4);
   -webkit-text-stroke: .5PX #000;
 }

@@ -1,10 +1,9 @@
 import './App.css';
-import { Tweet } from 'react-twitter-widgets';
+import { useEffect, useState } from "react";
 import Meme from "./Meme";
+import TweetContainer from "./TweetContainer";
 
 function OutputContainer(props) {
-
-  console.log(props, "-OutputContainer");
 
   const {
     tweet_id,
@@ -12,12 +11,15 @@ function OutputContainer(props) {
   } = props.data;
 
   let renderMemes = () => {
+    let tokensLength = tokens.length;
     let renderMemes = tokens.map(
       (ele, index) => {
       return (
         <Meme
           key={index}
+          index={index}
           data={ele}
+          tokensLength={tokensLength}
         />  
       )
     })
@@ -31,9 +33,9 @@ function OutputContainer(props) {
 
   let renderTweet = () => {
     return (
-      <section>
-        <Tweet tweetId={tweet_id} /> 
-      </section>  
+      <TweetContainer
+        tweetId={tweet_id}
+      />  
     )
   }
 

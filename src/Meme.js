@@ -1,6 +1,14 @@
+import { useState, useEffect } from 'react';
 import './App.css';
 
 function Meme(props) {
+
+  const [isDisplayed, setIsDisplayed] = useState(false)
+
+  const {
+    index, 
+    tokensLength
+  } = props;
 
   const { 
     image_path,
@@ -8,8 +16,24 @@ function Meme(props) {
     word
   } = props.data;
 
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsDisplayed(!isDisplayed), 500*index);
+  }, []);
+  
+
+  let renderDynamicVisibility = () => {
+    if (isDisplayed){
+      return "visible";
+    }else{
+      return "hidden";
+    }
+  }
+
   return (
-    <div className='meme_outer'>
+    <div 
+      style={{visibility: renderDynamicVisibility()}}
+      className='meme_outer'>
       <div className="img_component">
         <span className="first_span">{orig_word}</span>
         <img src={image_path} />
@@ -21,36 +45,3 @@ function Meme(props) {
 }
 
 export default Meme;
-
-
-
-// const {
-//   data: {
-//     top, 
-//     bottom,
-//     backgroundImgLink,
-//   },
-//   parentIndex,
-//   childIndex
-// } = props;
-
-
-// let togglePredictionInfo = () => {
-//   console.log({
-//     parentIndex,
-//     childIndex
-//   });
-// };
-
-// return (
-//   <div className='meme_outer'>
-//     <div 
-//       onClick={togglePredictionInfo}
-//       className="img_component">
-//       <span className="first_span">{top}</span>
-//       <img src={backgroundImgLink} />
-//       <span className="last_span">{bottom}</span>
-//     </div>
-//   </div>
-// );
-// }
