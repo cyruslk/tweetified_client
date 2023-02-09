@@ -1,5 +1,69 @@
 body{
-  background-color: #f0f0f0;
+  background-color: darkgray;
+}
+
+.rationale{
+  top: 0;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: -1;
+  width: 100vw;
+  height: 96vh;
+  padding: 2vh;
+}
+
+
+.rationale_left{
+  border-right: 1px solid;
+  width: 46%;
+  padding-right: 2%;
+}
+
+.rationale_right{
+  width: 50%;
+  padding-left: 2%;
+}
+
+.output{
+  margin-top: 35vw;
+}
+
+.rationale .inner_rationale{
+  width: 34vw;
+}
+
+.rationale *{
+  font-family: monospace;
+  font-weight: 100;
+  color: black;
+}
+
+.loading_screen{
+  background-color: red;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.loading_screen div{
+  font-size: 100px;
+  font-family: impact;
+  color: white;
+}
+
+.arrow_shuffle{
+  display: none;
+  position: fixed;
+  bottom: 6vw;
+  right: -18vw;
+  transform: rotate(95deg) scale(0.15);
+  transform-origin: bottom;
+  cursor: pointer;
 }
 
 .meme_outer, 
@@ -9,10 +73,12 @@ body{
 
 .output_container{
   display: flex;
-  width: 98vw;
+  width: 100vw;
   min-height: 70vh;
-  margin: 1vw;
-  margin-bottom: 4vw;
+  align-items: center;
+  justify-content: center;
+  padding-top: 4vw;
+  padding-bottom: 4vw;
 }
 
 .output_container section:first-child{
@@ -20,7 +86,7 @@ body{
 }
 
 .output_container section:last-child{
-  width: 60%;
+  width: 52.5%;
   overflow-x: hidden;
   height: 84vh;
   margin-top: 10px;
@@ -41,6 +107,7 @@ body{
 
 .twitter-tweet {
   margin-top: 0;
+  /* transform: scale(1.2); */
 }
 
 .img_label span{
@@ -58,9 +125,11 @@ body{
   display: inline-block;
 }
 
+
 .img_component img{
-  width: 28vw;
   cursor: pointer;
+  width: 16vw;
+  border: 1px solid;
 }
 
 .prediction {
@@ -98,12 +167,13 @@ body{
 }
 
 .img_component span{
-  font-family: impact;
-  text-transform: uppercase;
-  font-size: 30px;
-  color: #fff;
-  text-shadow: 1px -1px 12px black;
   TEXT-ALIGN: CENTER;
-  transform: scaleX(1.4);
   -webkit-text-stroke: .5PX #000;
+  color: greenyellow;
+  font-family: impact;
+  font-size: 14px;
+  text-shadow: 1px -1px 12px #000;
+  text-transform: uppercase;
+  -webkit-transform: scaleX(1.4);
+  transform: scaleX(1.4);
 }

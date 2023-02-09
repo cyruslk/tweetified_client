@@ -3,9 +3,6 @@ import { Tweet } from 'react-twitter-widgets';
 import Meme from "./Meme";
 
 function OutputContainer(props) {
-
-  console.log(props, "-OutputContainer");
-
   const {
     tweet_id,
     tokens
@@ -35,6 +32,12 @@ function OutputContainer(props) {
         <Tweet tweetId={tweet_id} /> 
       </section>  
     )
+  }
+
+  let checkProperty = tweet_id.hasOwnProperty('low');
+
+  if(checkProperty){
+    return null;
   }
 
   return (

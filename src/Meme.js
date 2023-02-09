@@ -21,36 +21,3 @@ function Meme(props) {
 }
 
 export default Meme;
-
-
-
-// const {
-//   data: {
-//     top, 
-//     bottom,
-//     backgroundImgLink,
-//   },
-//   parentIndex,
-//   childIndex
-// } = props;
-
-
-// let togglePredictionInfo = () => {
-//   console.log({
-//     parentIndex,
-//     childIndex
-//   });
-// };
-
-// return (
-//   <div className='meme_outer'>
-//     <div 
-//       onClick={togglePredictionInfo}
-//       className="img_component">
-//       <span className="first_span">{top}</span>
-//       <img src={backgroundImgLink} />
-//       <span className="last_span">{bottom}</span>
-//     </div>
-//   </div>
-// );
-// }
