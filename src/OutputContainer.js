@@ -19,9 +19,11 @@ function OutputContainer(props) {
       )
     })
     return (
-      <section className='meme_component'>
+      <main>
+      <section className='memes_container'>
           {renderMemes}
-      </section>  
+      </section>
+      </main>
     )
 
   };
@@ -29,7 +31,8 @@ function OutputContainer(props) {
   let renderTweet = () => {
     return (
       <section>
-        <Tweet tweetId={tweet_id} /> 
+        <Tweet
+          tweetId={tweet_id} /> 
       </section>  
     )
   }
@@ -41,11 +44,18 @@ function OutputContainer(props) {
   }
 
   return (
-    <div className='output_container'>  
-      {renderTweet()}
-      {renderMemes()}
-    </div>
+    <section className='output'>
+      <div className='output_memes'>
+        {renderMemes()}
+      </div>
+      <div className='output_Tweet'>
+        {renderTweet()}
+      </div>
+    </section>
   );
 }
 
 export default OutputContainer;
+
+// {renderMemes()}
+

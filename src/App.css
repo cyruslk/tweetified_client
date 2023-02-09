@@ -1,5 +1,5 @@
 body{
-  background-color: darkgray;
+  /* background-color: darkgray; */
 }
 
 .rationale{
@@ -11,14 +11,15 @@ body{
   z-index: -1;
   width: 100vw;
   height: 96vh;
-  padding: 2vh;
+  padding: 9vh;
+  padding-top: 2vw;
 }
-
 
 .rationale_left{
   border-right: 1px solid;
-  width: 46%;
+  width: 62%;
   padding-right: 2%;
+  height: 100%;
 }
 
 .rationale_right{
@@ -37,7 +38,23 @@ body{
 .rationale *{
   font-family: monospace;
   font-weight: 100;
+  font-size: 13px;
   color: black;
+}
+
+
+.meme_component{
+  width: 91vw;
+  margin-top: 4vw;
+  margin-bottom: 4vw;
+  border-top: 1px solid;
+  padding-top: 4vw;
+}
+
+.meme_component_outer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .loading_screen{
@@ -56,15 +73,6 @@ body{
   color: white;
 }
 
-.arrow_shuffle{
-  display: none;
-  position: fixed;
-  bottom: 6vw;
-  right: -18vw;
-  transform: rotate(95deg) scale(0.15);
-  transform-origin: bottom;
-  cursor: pointer;
-}
 
 .meme_outer, 
 .meme_container{
@@ -77,20 +85,11 @@ body{
   min-height: 70vh;
   align-items: center;
   justify-content: center;
-  padding-top: 4vw;
-  padding-bottom: 4vw;
+  padding-top: 15vw;
+  padding-bottom: 15vw;
+  border-top: 1px solid;
 }
 
-.output_container section:first-child{
-  width: 40%;
-}
-
-.output_container section:last-child{
-  width: 52.5%;
-  overflow-x: hidden;
-  height: 84vh;
-  margin-top: 10px;
-}
 
 .img_component{
   position: relative;
@@ -107,7 +106,16 @@ body{
 
 .twitter-tweet {
   margin-top: 0;
-  /* transform: scale(1.2); */
+}
+
+
+.tweet_outer{
+  position: absolute;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10vw;
 }
 
 .img_label span{
@@ -128,8 +136,9 @@ body{
 
 .img_component img{
   cursor: pointer;
-  width: 16vw;
+  width: 14vw;
   border: 1px solid;
+  box-shadow: 1px -1px 12px #000;
 }
 
 .prediction {
@@ -169,7 +178,7 @@ body{
 .img_component span{
   TEXT-ALIGN: CENTER;
   -webkit-text-stroke: .5PX #000;
-  color: greenyellow;
+  color: white;
   font-family: impact;
   font-size: 14px;
   text-shadow: 1px -1px 12px #000;
