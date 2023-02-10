@@ -29,7 +29,8 @@ function OutputContainer(props) {
   let renderTweet = () => {
     return (
       <section>
-        <Tweet tweetId={tweet_id} /> 
+        <Tweet 
+          tweetId={tweet_id} /> 
       </section>  
     )
   }

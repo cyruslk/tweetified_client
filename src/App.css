@@ -1,5 +1,49 @@
+@font-face {
+  font-family: "Ubuntu-Light";
+  src: url("fonts/Ubuntu-Light.ttf") format("truetype");
+} 
+
+
 body{
-  background-color: darkgray;
+  background-color: black;
+  overflow-x: hidden;
+}
+
+.words_splitted{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.words_splitted div{
+  border: 1px solid white;
+  margin: 0.4vw;
+  padding: 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 50px;
+}
+
+.words_splitted div img{
+  width: 80%;
+}
+
+.row_4 div img{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.title_project{
+  text-align: center;
+  margin-top: 2vw;
+  font-family: impact;
+  font-size: 14px;
+  text-shadow: 1px -1px 12px white;
+  text-transform: uppercase;
+  transform: scaleX(1.4);
+  color: white;
 }
 
 .rationale{
@@ -10,24 +54,37 @@ body{
   justify-content: center;
   z-index: -1;
   width: 100vw;
-  height: 96vh;
+  height: 100vh;
   padding: 2vh;
 }
 
 
 .rationale_left{
   border-right: 1px solid;
-  width: 46%;
+  width: 35%;
   padding-right: 2%;
 }
 
 .rationale_right{
-  width: 50%;
-  padding-left: 2%;
+  width: 65%;
+  padding-left: 0%;
+  text-align: center;
+  margin-top: 2vw;
+}
+
+.rationale_right div{
+  font-family: 'Ubuntu-Light';
+  font-weight: 100;
+  color: white;
+  font-size: 12px;
+}
+
+.img_logo_rationale{
+  background-color: black;
 }
 
 .output{
-  margin-top: 35vw;
+  margin-top: 100vh;
 }
 
 .rationale .inner_rationale{
@@ -35,9 +92,10 @@ body{
 }
 
 .rationale *{
-  font-family: monospace;
+  font-family: Ubuntu-Light;
   font-weight: 100;
-  color: black;
+  color: white;
+  font-size: 14px;
 }
 
 .loading_screen{
@@ -75,20 +133,49 @@ body{
   display: flex;
   width: 100vw;
   min-height: 70vh;
+  justify-content: center;
+  padding-top: 9vw;
+  padding-bottom: 4vw;
+  flex-direction: row-reverse;
+  border-top: 1px solid white;
+  box-shadow: 1px -1px 12px white;
+}
+
+.row_4 div{
+  height: 100px;
+  display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 4vw;
-  padding-bottom: 4vw;
+  flex-direction: column;
+  font-family: impact;
+  text-transform: uppercase;
+  text-shadow: 1px -1px 12px white;
+}
+
+.row_4 div img{
+  width: 80%;
+  height: auto;
+}
+
+.row_4 div:first-child img{
+  filter: invert(1);
+  width: 80%;
+  height: auto;
+}
+
+.output_container:nth-child(odd) {
+  flex-direction: row;
 }
 
 .output_container section:first-child{
-  width: 40%;
+  width: 25%;
+  display: flex;
+  justify-content: center;
 }
 
 .output_container section:last-child{
-  width: 52.5%;
+  width: 71%;
   overflow-x: hidden;
-  height: 84vh;
   margin-top: 10px;
 }
 
@@ -107,7 +194,7 @@ body{
 
 .twitter-tweet {
   margin-top: 0;
-  /* transform: scale(1.2); */
+  transform: scale(1.2);
 }
 
 .img_label span{
@@ -129,7 +216,7 @@ body{
 .img_component img{
   cursor: pointer;
   width: 16vw;
-  border: 1px solid;
+  box-shadow: 1px -1px 12px white;
 }
 
 .prediction {
@@ -169,7 +256,7 @@ body{
 .img_component span{
   TEXT-ALIGN: CENTER;
   -webkit-text-stroke: .5PX #000;
-  color: greenyellow;
+  color: white;
   font-family: impact;
   font-size: 14px;
   text-shadow: 1px -1px 12px #000;
