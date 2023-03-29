@@ -44,6 +44,10 @@ body{
   text-transform: uppercase;
   transform: scaleX(1.4);
   color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
 }
 
 .rationale{
@@ -263,4 +267,13 @@ body{
   text-transform: uppercase;
   -webkit-transform: scaleX(1.4);
   transform: scaleX(1.4);
+}
+
+@keyframes fadeInImages {
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
 }

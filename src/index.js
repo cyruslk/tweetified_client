@@ -1,13 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Favicon from 'react-favicon'
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
+  <div>
+  <Favicon url='https://res.cloudinary.com/sismographie-cloud/image/upload/v1676042894/stuff/Trollface_bk61s5.png' />
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
+  </React.StrictMode>
+  </div>,
   document.getElementById('root')
 );
 

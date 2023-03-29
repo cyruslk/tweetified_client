@@ -55,12 +55,12 @@ function App(){
     return (
       <div>
       <div className="title_project">
-          MEME.NET
+          TWEETIFIED
       </div> 
       <section className="rationale">
         <div className="rationale_left">
         <p>
-          MEME.NET is a Web App that combines the Twitter, Google and Tensorflow image recognition APIs in order to translate words by words into internet memes the textual content of randomly selected news tweets. Updated at each 30 minutes intervals with a new entry randomly sourced from a list of popular news providers, the project’s process moreover performs the following procedural authorship:
+          TWEETIFIED is a Web App that combines the Twitter, Google and Tensorflow image recognition APIs in order to translate words by words into internet memes the textual content of randomly selected news tweets. Updated at each 30 minutes intervals with a new entry randomly sourced from a list of popular news providers, the project’s process moreover performs the following procedural authorship:
         </p>
 
         <ol>
@@ -85,7 +85,7 @@ function App(){
         </ol>
 
         <p>
-          MEME.NET is a critique of social media platforms and their dynamics in turning our lives into a constant spectacle - a spectacle we observe through the mediation of these online platforms. From this standpoint, it draws from Guy Debord’s The Society of the Spectacle (Debord, 1967) in creating a humoristic and absurd version of these Tweets - Tweets that already contribute to the news spectacle - by turning them into memes; memes whose sole purpose is to entertain.  Using humour and satire, the project also deploys a critical lens on our algorithmic culture, where algorithms increasingly act as main curators of our social media feeds and content.
+          TWEETIFIED is a critique of social media platforms and their dynamics in turning our lives into a constant spectacle - a spectacle we observe through the mediation of these online platforms. From this standpoint, it draws from Guy Debord’s The Society of the Spectacle (Debord, 1967) in creating a humoristic and absurd version of these Tweets - Tweets that already contribute to the news spectacle - by turning them into memes; memes whose sole purpose is to entertain.  Using humour and satire, the project also deploys a critical lens on our algorithmic culture, where algorithms increasingly act as main curators of our social media feeds and content.
         </p>
         </div>
         <div className="rationale_right">
@@ -225,12 +225,4 @@ function App(){
 
 
 export default App;
-
-
-// {renderLoading()}
-// <section className="output">
-//   {renderOutputContainers()}
-//   </section>
-
-
 

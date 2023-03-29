@@ -14,6 +14,7 @@ function OutputContainer(props) {
       return (
         <Meme
           key={index}
+          index={index}
           data={ele}
         />  
       )
